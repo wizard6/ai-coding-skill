@@ -13,13 +13,13 @@
 # Windows PowerShell
 $dir = Join-Path $env:USERPROFILE ".cursor\skills"
 New-Item -ItemType Directory -Force -Path $dir | Out-Null
-git clone https://github.com/wizard6/ai-coding.git (Join-Path $dir "ai-coding")
+git clone https://github.com/wizard6/ai-coding-skill.git (Join-Path $dir "ai-coding")
 ```
 
 ```bash
 # macOS / Linux
 mkdir -p ~/.cursor/skills
-git clone https://github.com/wizard6/ai-coding.git ~/.cursor/skills/ai-coding
+git clone https://github.com/wizard6/ai-coding-skill.git ~/.cursor/skills/ai-coding
 ```
 
 若目标目录已存在且不是本仓库，请先备份再删/改名，或改用方式 B。

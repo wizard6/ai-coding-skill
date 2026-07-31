@@ -19,13 +19,13 @@
 
 ```powershell
 $dest = Join-Path $env:USERPROFILE ".cursor\skills\ai-coding"
-git clone https://github.com/wizard6/ai-coding.git $dest
+git clone https://github.com/wizard6/ai-coding-skill.git $dest
 ```
 
 **macOS / Linux：**
 
 ```bash
-git clone https://github.com/wizard6/ai-coding.git ~/.cursor/skills/ai-coding
+git clone https://github.com/wizard6/ai-coding-skill.git ~/.cursor/skills/ai-coding
 ```
 
 装好后新开 Agent 对话，或在对话里 `@ai-coding`。完整步骤与项目级安装见 [INSTALL.md](INSTALL.md)。
