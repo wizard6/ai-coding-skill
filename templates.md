@@ -1,4 +1,4 @@
-# AI Coding 模板速查（v1.28）
+# AI Coding 模板速查（v1.30）
 
 ## 索引文件模板
 
@@ -84,9 +84,13 @@ indexes: INDEX.md, API-INDEX.md, DB-INDEX.md, docs/EFFECTS.lock.md, docs/FEATURE
 【索引】发现可记：[巨石|入口|热点|踩坑] → 拟写一行：[…]。是否写入 INDEX？提醒：索引可能过期。未确认不改。
 【提交】脏树或中等/大事前：引导语「请回复编号选择」+ text 围栏内分行 ○1 先提交 / ○2 不提交 / ○其他（对用户须真换行）。
 【锁】已读 EFFECTS/FEATURE.lock。触锁：[条目]。缺文件则问是否创建。
+【薄宏观】目的：[用户得到什么]。边界：[权限/租户/副作用/不改]。契约：[DTO|Tool|事件]。验收：[可操作一步]。锁：[触 7.24？]。半页内；不动手。
+【聚焦】一句话重定义：[…]。In：[…]。Out：[≥2]。假设风险：[…]。主链+Plan B：[…]。输出规格：[…]。三检：结论/科普/行动。不动手。
+【清单总结】已做：[…]。未做：[无|…]。下一步：[1–3]。
 【UI检查】按 7.15+7.17 实测；口头过检无效。
 【外取参考】触发 7.16：停盲猜；按类给外站；等用户带回参考。
 【NAV规则】点名 rules 时先拉目录再动手。
+【安装技能】复制 NAV「安装方法」粘贴块；或把 `~/.cursor/skills/ai-coding/` 放到本机 skills 目录。
 ```
 
 ### 确认 list 示例
@@ -96,6 +100,17 @@ indexes: INDEX.md, API-INDEX.md, DB-INDEX.md, docs/EFFECTS.lock.md, docs/FEATURE
 2. 文件：notes/css/notes.css、shared/css/scrollbar.css（新建）。
 3. 不改：其它页面、滚动逻辑、JS。
 4. 可选童子军：抽 shared 滚动条变量（需你点头）。
+```
+
+中等/大事须加薄宏观块（7.25）：
+
+```text
+【薄宏观】
+- 目的：用户能在门户用机器人查制度并看到引用。
+- 边界：只读知识库；无发邮件；tenant 过滤必做。
+- 契约：retrieve_policy Tool Schema；citation 字段进响应。
+- 验收：无依据时拒答；黄金集 20 条引用可追溯。
+- 锁：拟写入 FEATURE.lock「制度问答须引用」——是否创建？
 ```
 
 需要选方案时（**选项进 \`\`\`text 围栏，每项一行**）：
