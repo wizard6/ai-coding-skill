@@ -1,10 +1,10 @@
 # AI Coding（Cursor Agent Skill）
 
-**AI Coding 编程规范** — Cursor 个人/团队可安装的 Agent Skill（当前 **v1.37**）。
+**AI Coding 编程规范** — Cursor 个人/团队可安装的 Agent Skill（当前 **v1.38**）。
 
-用于：依赖向内、索引、确认后改、会话 memory、可扩展点（rule+占位）、切片交付、收敛止损、纪律回复、L1–L4 等。  
+用于：依赖向内、索引、确认后改、会话 memory、可扩展点（rule+占位）、切片交付、收敛止损、主动召回分析、纪律回复、L1–L4 等。  
 **已内化**（勿再单独调度）：vibe-coding、vibe-governance、focus-thinking、grounded-reply、convergent-fix。  
-触发：`@ai-coding` 或上述旧名 / 「编程规范」/ rules。
+触发：`@ai-coding` 或上述旧名 / 「编程规范」/ rules。（被动触发时不做 7.33 召回分析。）
 
 | 文件 | 说明 |
 |------|------|

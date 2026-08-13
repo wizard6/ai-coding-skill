@@ -1,4 +1,4 @@
-# AI Coding 模板速查（v1.37）
+# AI Coding 模板速查（v1.38）
 
 ## 索引文件模板
 
@@ -78,6 +78,7 @@ indexes: INDEX.md, API-INDEX.md, DB-INDEX.md, docs/EFFECTS.lock.md, docs/FEATURE
 【根因】错/多/少改：核心原因 1 句 + 规避；是否写入 .ai-context。
 【质疑】站在用户角度：表面建议是 X；用户真正要得到的是 Y。不清点：[≤3 问]。若 Y≠X：拒绝 X，给替代 1…2…；不动手。禁止用程序/架构目的替换 Y。
 【技能体检】对 ai-coding 跑防腐烂表；只表+必改 diff。
+【召回分析】仅主动召回：命中依据=[…]；入口=[description|可扩展点|memory|rules|其它]；判定=合适|过宽|应改走 rule-only。被动 `@`/挂载/斜杠 → 写「被动召回，跳过 7.33」。
 【纪律回复】按 7.29 输出：结论前置、直接事实折叠、越权分级、不盲信；不动手改业务。
 【会话SSOT】检查 memory：SSOT / 日志 / 经验沉淀 / 拆分外链；无 SSOT 则猜/问→确认；完成追加日志；可复用进经验；禁改 SSOT。
 【规则】读 SKILL「可扩展点」→ 扫项目 `.cursor/rules/*.mdc`（`{{占位}}` 换实值）→ 无则提示复制 `rule-placeholder.mdc.example`；写 rule 走 7.20 未确认不落盘；点名 NAV 先拉 rules.json。
