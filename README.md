@@ -1,14 +1,15 @@
 # AI Coding（Cursor Agent Skill）
 
-**AI Coding 编程规范** — Cursor 个人/团队可安装的 Agent Skill（当前 **v1.36**）。
+**AI Coding 编程规范** — Cursor 个人/团队可安装的 Agent Skill（当前 **v1.37**）。
 
-用于：依赖向内、索引驱动、效果/功能锁、先确认后改、沟通语言层级 L1–L4、纪律化回复（7.29）、会话 memory（7.30）、可扩展点（优先 rule+占位）、量级省耗、事毕复盘等。  
-触发：项目编码，或提及「编程规范 / 表述 / 先确认 / @ai-coding / @grounded-reply / rules」。
+用于：依赖向内、索引、确认后改、会话 memory、可扩展点（rule+占位）、切片交付、收敛止损、纪律回复、L1–L4 等。  
+**已内化**（勿再单独调度）：vibe-coding、vibe-governance、focus-thinking、grounded-reply、convergent-fix。  
+触发：`@ai-coding` 或上述旧名 / 「编程规范」/ rules。
 
 | 文件 | 说明 |
 |------|------|
-| [SKILL.md](SKILL.md) | 主规范（Agent 摘要 / SSOT） |
-| [rule-placeholder.mdc.example](rule-placeholder.mdc.example) | 项目 rule 占位样例（复制到 `.cursor/rules/`） |
+| [SKILL.md](SKILL.md) | Agent 摘要（SSOT） |
+| [rule-placeholder.mdc.example](rule-placeholder.mdc.example) | 项目 rule 占位样例 |
 | [reference.md](reference.md) | 细则与编号总表 |
 | [templates.md](templates.md) | 可复制模板 |
 | [CHANGELOG.md](CHANGELOG.md) | 版本变更 |

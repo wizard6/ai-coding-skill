@@ -1,5 +1,19 @@
 # ai-coding CHANGELOG
 
+## v1.37 — 2026-08-13
+
+**主题**：内化周边技能 —— 不再单独管理 vibe-coding / vibe-governance / focus-thinking / grounded-reply / convergent-fix。
+
+| ID | 内容 |
+|----|------|
+| 已内化表 | SKILL 用「已内化」替换「与其它技能」分工表；旧 `@` 名=本技能别名 |
+| 7.31 | 收敛止损（convergent-fix） |
+| 7.32 | 切片交付（vibe-coding） |
+| 治理 | vibe-governance → SSOT + 7.20/7.24 |
+| 7.27 / 7.29 | 继续承载 focus / grounded-reply |
+
+期望效果：只挂 `@ai-coding` 即可；不再并行调度多技能抢条文。
+
 ## v1.36 — 2026-08-13
 
 **主题**：SKILL 摘要「可扩展点」——重点召回；优先 `.cursor/rules` + `{{占位}}`。
