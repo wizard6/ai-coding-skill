@@ -1,5 +1,17 @@
 # ai-coding CHANGELOG
 
+## v1.41 — 2026-08-13
+
+**主题**：薄内化 intent-routing → **7.34**；focus-drive-dev 仍独立。
+
+| 项 | 内容 |
+|----|------|
+| 7.34 | 唯一意图 SOLVE/EXPLAIN/EVOLVE；优先级；禁混类；下游仍守 7.7/7.27/7.31/7.32 |
+| 已内化表 | 增加 intent-routing；注明 focus-drive-dev 独立 |
+| 安装态 | 建议停用 `intent-routing` 目录入口 |
+
+期望效果：修/懂/优不串台；HTML 蓝图流程仍用独立 focus-drive。
+
 ## v1.40 — 2026-08-13
 
 **主题**：多选/任务复述强制 md 列表拆分。

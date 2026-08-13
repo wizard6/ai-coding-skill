@@ -1,15 +1,17 @@
 ---
 name: ai-coding
 description: >-
-  AI Coding 编程规范 v1.40。仅用户点名时启用，禁止因「写代码/改 bug」等泛词主动加载。
-  触发词：编程规范、@ai-coding、先确认后改、会话 memory、技能体检、召回分析，
-  以及旧别名 @vibe-coding / @grounded-reply / @focus-thinking / @vibe-governance / @convergent-fix。
+  AI Coding 编程规范 v1.41。仅用户点名时启用，禁止因「写代码/改 bug」等泛词主动加载。
+  触发词：编程规范、@ai-coding、先确认后改、会话 memory、技能体检、召回分析、
+  SOLVE、EXPLAIN、EVOLVE、意图路由，
+  以及旧别名 @vibe-coding / @grounded-reply / @focus-thinking / @vibe-governance /
+  @convergent-fix / @intent-routing。
   点名后按本技能全文执行（旧技能已停用，勿再并行调度）。
 ---
 
-# AI Coding 编程规范 v1.40
+# AI Coding 编程规范 v1.41
 
-**先想后写 · 先确认后改 · 会话 memory · 可扩展点 · 切片交付 · 收敛止损 · 召回分析 · L1–L4 · 纪律化回复**
+**先想后写 · 先确认后改 · 意图路由 · 会话 memory · 切片交付 · 收敛止损 · L1–L4 · 纪律化回复**
 
 细则：[reference.md](reference.md) · 模板：[templates.md](templates.md) · 变更：[CHANGELOG.md](CHANGELOG.md)  
 Rule 占位样例：[rule-placeholder.mdc.example](rule-placeholder.mdc.example)
@@ -26,8 +28,10 @@ Rule 占位样例：[rule-placeholder.mdc.example](rule-placeholder.mdc.example)
 | **vibe-coding** | **7.32** + 交付清单 | 一次一个可运行切片；交付前自检；快靠切片小 |
 | **vibe-governance** | **本文件 SSOT** + **7.20/7.24** | 单一事实源；锁与落 rule 须确认；失序先止血再扩 |
 | **convergent-fix** | **7.31** | 改 A 坏 B：锁范围、基线、三振停扩 |
+| **intent-routing** | **7.34** | 每条消息唯一意图：SOLVE / EXPLAIN / EVOLVE |
 
-完整模板仍可存在于旧目录供人阅读；**Agent 只执行本技能条文**。
+完整模板仍可存在于旧目录供人阅读；**Agent 只执行本技能条文**。  
+**未内化（仍可独立调度）**：[focus-drive-dev](../focus-drive-dev/SKILL.md)（HTML 蓝图分段推进；下游执行层用本技能 7.27/7.32/7.31）。
 
 ## 可扩展点（重点召回 · 优先 rule + 占位）
 
@@ -41,15 +45,16 @@ Rule 占位样例：[rule-placeholder.mdc.example](rule-placeholder.mdc.example)
 | **运维 / 索引** | `AI-OPS` · `INDEX` / `.ai-context` | 7.19 / 7.22 |
 | **NAV Rules** | `http://47.95.115.236/rules.json` | 点名再拉 |
 | **复盘落 rule** | 7.20 | **未确认不写** |
+| **HTML 分段蓝图** | 独立技能 `focus-drive-dev` | 复杂多切片时点名；勿并入本文件 |
 
-**开工：** 扫本表 → 读项目 rules（占位换实值）→ memory `[SSOT]` → 定级。  
+**开工：** 扫本表 → 读项目 rules（占位换实值）→ memory `[SSOT]` → **7.34 意图** → 定级。  
 **7.33：** Agent **主动**决定加载本技能时，须短评召回路径；用户 `@`/挂载/斜杠**被动召回则跳过**。
 
 ## 工作流
 
 ```
-（主动召回则 7.33）→ 可扩展点+rules → memory（7.30）→ 定级（7.21）→ 语言/越权（7.28/7.29）
-→ 锁（7.24）→ 提交提示（7.23）→ 薄宏观（7.25）→ 诊断 → 确认
+（主动召回则 7.33）→ 可扩展点+rules → memory（7.30）→ **意图 7.34** → 定级（7.21）
+→ 语言/越权（7.28/7.29）→ 锁（7.24）→ 提交提示（7.23）→ 薄宏观（7.25）→ 诊断 → 确认
 →（开放题）7.27 → **单切片实现（7.32）** → 若改A坏B则 **7.31** → 复盘
 → 日志+经验（禁改 SSOT）；TodoList → 7.26
 ```
@@ -58,7 +63,8 @@ Rule 占位样例：[rule-placeholder.mdc.example](rule-placeholder.mdc.example)
 
 | 阶段 | 必须 | 禁止 |
 |------|------|------|
-| **7.33** | 主动召回时评路径（命中依据/入口/是否过宽） | 被动 `@` 仍写召回分析 |
+| **7.34** | 唯一意图 SOLVE/EXPLAIN/EVOLVE（默认可静默） | 解释里夹带改码；修里夹带长篇架构 |
+| **7.33** | 主动召回时评路径 | 被动 `@` 仍写召回分析 |
 | **可扩展点** | 读表 + 项目 rules | 忽略 rule；私货写进技能 |
 | **7.30 / 7.32** | SSOT；单切片可运行；交付自检 | SSOT 流水账；贪多切片 |
 | **7.31** | 改 A 坏 B 时锁范围/基线；三振停扩 | 无限扩 scope「修过去」 |
@@ -74,6 +80,7 @@ Rule 占位样例：[rule-placeholder.mdc.example](rule-placeholder.mdc.example)
 | **7.31** | 收敛止损：基线+范围白名单；逻辑/风格隔离；三振出局转架构确认 |
 | **7.32** | 切片交付：最小可运行；交付前自检；界面走 7.15+7.17 |
 | **7.33** | 主动召回→评估路径；被动召回→不做 |
+| **7.34** | 唯一意图：SOLVE 修 / EXPLAIN 因 / EVOLVE 设计；禁混类 |
 
 ## 输出与确认（必守短版）
 
@@ -84,17 +91,16 @@ Rule 占位样例：[rule-placeholder.mdc.example](rule-placeholder.mdc.example)
 
 ## 每次任务清单
 
-**开工**：若主动召回→7.33；可扩展点/rules → 7.30 → 7.21 → 7.28/7.29 → 7.24 → 7.25 → 7.23 → 确认  
-**编码**：7.32 单切片；若震荡 → 7.31  
+**开工**：若主动召回→7.33；可扩展点/rules → 7.30 → **7.34** → 7.21 → 7.28/7.29 → 7.24 → 7.25 → 7.23 → 确认  
+**编码**：仅 SOLVE；7.32 单切片；若震荡 → 7.31  
 **交付/复盘**：UI 实测；日志/经验；问提交与落 rule  
 
 ## 提示词锚点
 
 | 标签 | 含义 |
 |------|------|
-| 【确认】【诊断】【薄宏观】【聚焦】【层级】 | templates |
+| 【确认】【诊断】【薄宏观】【聚焦】【层级】【意图】 | templates |
 | 【纪律回复】【会话SSOT】【规则】【切片】【收敛】【召回分析】【任务列表】 | 7.29 / 7.30 / 可扩展点 / 7.32 / 7.31 / 7.33 / 7.11 |
-
 | 【清单总结】【复盘】【省耗】【索引】【提交】【锁】【技能体检】 | templates |
 
 模板 → [templates.md](templates.md)。

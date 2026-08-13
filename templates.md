@@ -1,4 +1,4 @@
-# AI Coding 模板速查（v1.40）
+# AI Coding 模板速查（v1.41）
 
 ## 索引文件模板
 
@@ -80,6 +80,7 @@ indexes: INDEX.md, API-INDEX.md, DB-INDEX.md, docs/EFFECTS.lock.md, docs/FEATURE
 【技能体检】对 ai-coding 跑防腐烂表；只表+必改 diff。
 【召回分析】仅主动召回：命中依据=[…]；入口=[description|可扩展点|memory|rules|其它]；判定=合适|过宽|应改走 rule-only。被动 `@`/挂载/斜杠 → 写「被动召回，跳过 7.33」。
 【纪律回复】按 7.29 输出：结论前置、直接事实折叠、越权分级、不盲信；不动手改业务。
+【意图】按 7.34 锁定唯一：SOLVE|EXPLAIN|EVOLVE；默认可静默；模糊则 ○ 问；展示路由时开头标 [SOLVE] 等。
 【任务列表】多选/多项开场：先「按 N+M 执行」再 md 列表一任务一行；禁「收到 2+3：A，并 B」挤句。
 【会话SSOT】检查 memory：SSOT / 日志 / 经验沉淀 / 拆分外链；无 SSOT 则猜/问→确认；完成追加日志；可复用进经验；禁改 SSOT。
 【规则】读 SKILL「可扩展点」→ 扫项目 `.cursor/rules/*.mdc`（`{{占位}}` 换实值）→ 无则提示复制 `rule-placeholder.mdc.example`；写 rule 走 7.20 未确认不落盘；点名 NAV 先拉 rules.json。
