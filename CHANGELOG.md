@@ -1,5 +1,16 @@
 # ai-coding CHANGELOG
 
+## v1.39 — 2026-08-13
+
+**主题**：收紧 description 防误召回；旧内化技能目录停用。
+
+| 项 | 内容 |
+|----|------|
+| description | 删掉「写代码/依赖/索引/切片…」泛词汤；改为点名触发词 +「禁止因修 bug 等泛词主动加载」 |
+| 安装态 | Cursor 下 `vibe-coding` / `vibe-governance` / `focus-thinking` / `grounded-reply` / `convergent-fix` → `skills-disabled` |
+
+期望效果：未点名本规范时 Agent 不主动挂 ai-coding；旧 `@` 别名仍可通过本技能 description 命中。
+
 ## v1.38 — 2026-08-13
 
 **主题**：主动召回须做召回分析；用户被动 `@`/挂载不分析。

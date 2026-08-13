@@ -1,16 +1,13 @@
 ---
 name: ai-coding
 description: >-
-  AI Coding 编程规范 v1.38：先想后写、依赖向内、索引驱动、效果锁与功能锁、
-  薄宏观、TodoList 终局、开放题聚焦（内化 focus）、L1–L4、纪律化回复（内化 grounded-reply）、
-  会话 memory、可扩展点（rule+占位）、切片交付（内化 vibe-coding）、工程 SSOT（内化 vibe-governance）、
-  改A坏B收敛止损（内化 convergent-fix）、主动召回须评估召回路径（被动@跳过）、
-  先确认后改、量级省耗、事毕复盘、UI 实测。
-  提及 编程规范 / @ai-coding / @vibe-coding / @grounded-reply / @focus-thinking /
-  @vibe-governance / @convergent-fix / rules 时均按本技能执行（不再单独调度他技能）。
+  AI Coding 编程规范 v1.39。仅用户点名时启用，禁止因「写代码/改 bug」等泛词主动加载。
+  触发词：编程规范、@ai-coding、先确认后改、会话 memory、技能体检、召回分析，
+  以及旧别名 @vibe-coding / @grounded-reply / @focus-thinking / @vibe-governance / @convergent-fix。
+  点名后按本技能全文执行（旧技能已停用，勿再并行调度）。
 ---
 
-# AI Coding 编程规范 v1.38
+# AI Coding 编程规范 v1.39
 
 **先想后写 · 先确认后改 · 会话 memory · 可扩展点 · 切片交付 · 收敛止损 · 召回分析 · L1–L4 · 纪律化回复**
 

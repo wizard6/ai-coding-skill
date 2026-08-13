@@ -1,6 +1,6 @@
-# AI Coding 编程规范 v1.38 — 完整条文
+# AI Coding 编程规范 v1.39 — 完整条文
 
-核心理念：先设计再编码；**薄宏观约束内生长**；依赖向内；改前确认；用户视角；**TodoList 终局**；**开放题聚焦（7.27）**；**语言 L1–L4**；**纪律回复（7.29）**；**会话 memory（7.30）**；**可扩展点 rule+占位**；**切片交付（7.32）**；**收敛止损（7.31）**；**主动召回分析（7.33）**。旧技能名（vibe-coding / vibe-governance / focus-thinking / grounded-reply / convergent-fix）**已内化，Agent 不再单独调度**。
+核心理念：先设计再编码；**薄宏观约束内生长**；依赖向内；改前确认；用户视角；**TodoList 终局**；**开放题聚焦（7.27）**；**语言 L1–L4**；**纪律回复（7.29）**；**会话 memory（7.30）**；**可扩展点 rule+占位**；**切片交付（7.32）**；**收敛止损（7.31）**；**主动召回分析（7.33）**。旧技能名（vibe-coding / vibe-governance / focus-thinking / grounded-reply / convergent-fix）**已内化，Agent 不再单独调度**。description **禁止泛词误召回**（见 frontmatter）。
 
 **外部规则源（NAV）**：目录 `http://47.95.115.236/rules.json`；条目 `/rules/{constraint|SKILL|MCP}/{slug}`（忽略 `example`）；浏览页 `/nav/rules.html`。用户点名该站或 Rules 时：先读 `rules.json` 与相关 constraint，简述将守路径。本地编号与线上冲突时取**更严且更短**，记 CHANGELOG。
 
@@ -583,7 +583,8 @@
 | 输出 | ≤3 行：① 命中依据（哪句用户话/哪条 description）② 召回入口（description / 可扩展点 / memory / rules / 其它）③ 判定：合适 / 过宽 / 应改走 rule-only |
 | 时机 | 主动召回当轮开工第一屏可附；不替代业务结论 |
 | 禁止 | 被动召回仍写「召回分析」；把召回分析写成第二套工作流说明书 |
-| 与体检 | 【技能体检】可抽查 description 是否易误召回；误召回多 → 收紧 description 或把私货迁 rule |
+| 与体检 | 【技能体检】可抽查 description 是否易误召回；误召回多 → 收紧 description（禁泛词汤）或把私货迁 rule |
+| description | 应用点名触发词；禁止用「写代码/改 bug/依赖/索引」等日常词当主动召回钩子 |
 
 ## 八、提交前自查
 
