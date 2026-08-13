@@ -1,5 +1,18 @@
 # ai-coding CHANGELOG
 
+## v1.36 — 2026-08-13
+
+**主题**：SKILL 摘要「可扩展点」——重点召回；优先 `.cursor/rules` + `{{占位}}`。
+
+| 项 | 内容 |
+|----|------|
+| SKILL | 新增可扩展点表；开工先扫表+项目 rules；description 含 rules/AGENTS/NAV |
+| 样例 | `rule-placeholder.mdc.example` |
+| templates | 【规则】锚点 |
+| reference | 7.30.1 可扩展点 + rule 占位 |
+
+期望效果：Rules/热点召回走固定入口，项目私货不塞进技能正文。
+
 ## v1.35 — 2026-08-13
 
 **主题**：SKILL 抽瘦 + 命名对齐 —— Agent 摘要压到建议体量；细则留在 reference/templates。

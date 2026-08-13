@@ -1,0 +1,41 @@
+---
+description: >-
+  {{PROJECT}} 项目环境与热点入口（ai-coding 可扩展点 · rule+占位）。
+  复制到项目 .cursor/rules/ 后替换全部 {{…}}；未替换的占位视为未配置。
+alwaysApply: true
+---
+
+# {{PROJECT}} · 环境与热点（占位 rule）
+
+> 来源：ai-coding `rule-placeholder.mdc.example`。优先用本 rule 承载项目私货；不要写回技能正文。
+
+## 环境（必填占位）
+
+| 键 | 值 |
+|----|-----|
+| 项目名 | `{{PROJECT}}` |
+| 仓库根 | `{{REPO_ROOT}}` |
+| 后端 | `{{BACKEND}}` |
+| 前端 | `{{UI}}` |
+| 数据库 | `{{DB}}` |
+| Mock / Token | `{{MOCK}}` |
+| 临时目录 | `{{TEMP}}` |
+
+## 热点入口（按需删减）
+
+- 改 UI：`{{UI_HOTSPOT}}`
+- 改接口：`{{API_HOTSPOT}}`
+- 改库表：`{{DB_HOTSPOT}}` · 变更存档 `{{SQL_EXELOG}}`
+- memory：`{{MEMORY_PATH}}`（默认项目根 `memory.md`）
+- 锁文件：`{{EFFECTS_LOCK}}` · `{{FEATURE_LOCK}}`
+- 运维：`{{AI_OPS}}`
+
+## 硬约束（项目侧）
+
+- {{CONSTRAINT_1}}
+- {{CONSTRAINT_2}}
+
+## 与 ai-coding
+
+开工：先读本 rule（占位已换成实值）→ 再读 `memory.md` `[SSOT]` → 再定级。  
+写新 rule / 改本 rule：走 ai-coding **7.20**，**未确认不落盘**。

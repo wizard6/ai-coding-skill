@@ -1,4 +1,4 @@
-# AI Coding 模板速查（v1.35）
+# AI Coding 模板速查（v1.36）
 
 ## 索引文件模板
 
@@ -80,6 +80,7 @@ indexes: INDEX.md, API-INDEX.md, DB-INDEX.md, docs/EFFECTS.lock.md, docs/FEATURE
 【技能体检】对 ai-coding 跑防腐烂表；只表+必改 diff。
 【纪律回复】按 7.29 输出：结论前置、直接事实折叠、越权分级、不盲信；不动手改业务。
 【会话SSOT】检查 memory：SSOT / 日志 / 经验沉淀 / 拆分外链；无 SSOT 则猜/问→确认；完成追加日志；可复用进经验；禁改 SSOT。
+【规则】读 SKILL「可扩展点」→ 扫项目 `.cursor/rules/*.mdc`（`{{占位}}` 换实值）→ 无则提示复制 `rule-placeholder.mdc.example`；写 rule 走 7.20 未确认不落盘；点名 NAV 先拉 rules.json。
 【自我优化】期望效果：[一句]。写不出则停止。然后：诊断 → 确认 → 落地。
 【复盘】结果：[一句]。必要路径：[1–3 步]。可删/可脚本化：[项]。量级：小事/中等/大事；工具约 N 次；超预算：是/否。若提前知道 [X] 可少 [Y] 次。建议落点：项目 / 全局 / 不写。
 【省耗】量级：小事/中等/大事。缺：[文件|位置|索引|其它]。动作：问用户 / 读 INDEX|README|打开文件 / 停搜。
