@@ -1,13 +1,13 @@
 ---
 name: ai-coding
 description: >-
-  AI Coding 编程规范 v1.39。仅用户点名时启用，禁止因「写代码/改 bug」等泛词主动加载。
+  AI Coding 编程规范 v1.40。仅用户点名时启用，禁止因「写代码/改 bug」等泛词主动加载。
   触发词：编程规范、@ai-coding、先确认后改、会话 memory、技能体检、召回分析，
   以及旧别名 @vibe-coding / @grounded-reply / @focus-thinking / @vibe-governance / @convergent-fix。
   点名后按本技能全文执行（旧技能已停用，勿再并行调度）。
 ---
 
-# AI Coding 编程规范 v1.39
+# AI Coding 编程规范 v1.40
 
 **先想后写 · 先确认后改 · 会话 memory · 可扩展点 · 切片交付 · 收敛止损 · 召回分析 · L1–L4 · 纪律化回复**
 
@@ -78,6 +78,7 @@ Rule 占位样例：[rule-placeholder.mdc.example](rule-placeholder.mdc.example)
 ## 输出与确认（必守短版）
 
 - **7.11+7.29**：结论（语言 L3）+ ≤3 条；详情折叠；待确认不折叠。
+- **多选/任务复述**：用 md 列表拆条（一任务一行）；禁「收到 2+3：A，并 B」挤一句。
 - **7.8**：编号选择 + `text` 围栏分行 `○`。
 - **改码**：diff + 路径/行号；单切片。
 
@@ -92,7 +93,8 @@ Rule 占位样例：[rule-placeholder.mdc.example](rule-placeholder.mdc.example)
 | 标签 | 含义 |
 |------|------|
 | 【确认】【诊断】【薄宏观】【聚焦】【层级】 | templates |
-| 【纪律回复】【会话SSOT】【规则】【切片】【收敛】【召回分析】 | 7.29 / 7.30 / 可扩展点 / 7.32 / 7.31 / 7.33 |
+| 【纪律回复】【会话SSOT】【规则】【切片】【收敛】【召回分析】【任务列表】 | 7.29 / 7.30 / 可扩展点 / 7.32 / 7.31 / 7.33 / 7.11 |
+
 | 【清单总结】【复盘】【省耗】【索引】【提交】【锁】【技能体检】 | templates |
 
 模板 → [templates.md](templates.md)。

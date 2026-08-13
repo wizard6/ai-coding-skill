@@ -1,4 +1,4 @@
-# AI Coding 模板速查（v1.39）
+# AI Coding 模板速查（v1.40）
 
 ## 索引文件模板
 
@@ -80,6 +80,7 @@ indexes: INDEX.md, API-INDEX.md, DB-INDEX.md, docs/EFFECTS.lock.md, docs/FEATURE
 【技能体检】对 ai-coding 跑防腐烂表；只表+必改 diff。
 【召回分析】仅主动召回：命中依据=[…]；入口=[description|可扩展点|memory|rules|其它]；判定=合适|过宽|应改走 rule-only。被动 `@`/挂载/斜杠 → 写「被动召回，跳过 7.33」。
 【纪律回复】按 7.29 输出：结论前置、直接事实折叠、越权分级、不盲信；不动手改业务。
+【任务列表】多选/多项开场：先「按 N+M 执行」再 md 列表一任务一行；禁「收到 2+3：A，并 B」挤句。
 【会话SSOT】检查 memory：SSOT / 日志 / 经验沉淀 / 拆分外链；无 SSOT 则猜/问→确认；完成追加日志；可复用进经验；禁改 SSOT。
 【规则】读 SKILL「可扩展点」→ 扫项目 `.cursor/rules/*.mdc`（`{{占位}}` 换实值）→ 无则提示复制 `rule-placeholder.mdc.example`；写 rule 走 7.20 未确认不落盘；点名 NAV 先拉 rules.json。
 【切片】按 7.32：本轮最小可运行切片是什么？交付前自检；有 UI 则 7.15+7.17。
@@ -228,6 +229,19 @@ indexes: INDEX.md, API-INDEX.md, DB-INDEX.md, docs/EFFECTS.lock.md, docs/FEATURE
 `○ 1 — 按推断写入 SSOT 并继续` /
 `○ 2 — 我重写核心目标/环境` /
 `○ 其他 — 请直接说明`
+
+---
+
+### 多选确认开场示例（7.11）
+
+```markdown
+按 **2+3** 执行：
+
+- **2** 收紧 description，防误召回
+- **3** 用 skill-manager 停用旧技能入口
+```
+
+反例（禁止）：`收到 2+3：收紧 description 防误召回，并用 skill-manager 停用旧技能入口。`
 
 ---
 
